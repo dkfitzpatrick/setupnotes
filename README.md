@@ -1,0 +1,2 @@
+# setupnotes
+IT configuration notes
