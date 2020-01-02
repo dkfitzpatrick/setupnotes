@@ -61,6 +61,8 @@ Restart the VM.  When switching to the RDP session, Hyper-V will prompt for the 
 
 On the Windows host, setup sharing on a folder (sharename).  Go to **Advanced Settings** -> **Permissions** and make sure the Windows user has proper access.   On the Windows host, make sure *SMB 1.0/CIFS File Sharing Support* feature is turned on.  For your shared folder, the path to the share is on the main properties tab, usually shown as:  \\WINDOWS_HOSTNAME\\sharename.
 
+This [article](https://linuxhint.com/shared_folders_hypver-v_ubuntu_guest/) provides more detailed steps on the Windows host side.
+
 On the Ubuntu client, make sure the proper utilities are installed, and create a mount point:
 
     % sudo apt-get install cifs-utils
