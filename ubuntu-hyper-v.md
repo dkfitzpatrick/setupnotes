@@ -86,3 +86,33 @@ The filesystem can be mounted:
 Or for debugging, note the mount.cifs command can be used directly, cutting and pasting the options from the /etc/fstab file (everything after 'cifs' in the fstab file is passed as the data field to the -o option):
 
     % sudo mount.cifs //WINDOWS_HOSTNAME/share /mnt/share -o credentials=/home/VM_USERNAME/.smbcredentials,rw,noauto,uid=1000,gid=1000
+    
+ ## Developer Updates
+ 
+    % sudo apt update
+    $ sudo apt install software-properties-common apt-transport-https wget
+    
+ Visual Studio code:
+  
+    % wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add 
+    % sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+    % sudo apt update
+    % sudo apt install code
+    
+Clang
+ 
+    % wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
+    % sudo apt-add-repository "deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-8 main"
+    % sudo apt update && sudo apt install clang-8
+    
+Golang
+
+    % wget -q https://storage.googleapis.com/golang/getgo/installer_linux
+    % chmod +x installer_linux
+    % ./installer_linux
+    
+Chrome  
+
+    % wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+    % sudo dpkg -i google-chrome-stable_current_amd64.deb
+    % sudo apt install -f
